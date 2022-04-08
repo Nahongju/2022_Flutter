@@ -21,4 +21,19 @@ class ImageWidgetApp extends StatefulWidget{
 class _ImageWidgetApp extends State<ImageWidgetApp>{
   @override
   Widget build(BuildContext){
-    
+    return Scaffold(
+      appBar: AppBar(title: Text('Image Widget')),
+      body: Container(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget> [
+              // asset에 추가된 이미지를 위젯으로 가져오기
+              Image.asset('image/image.png')
+            ]
+          )     // Column
+        )     // Center
+      )      // Container
+    );      // Scaffold
+  }
+}
