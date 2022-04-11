@@ -38,6 +38,12 @@ class _WidgetExampleState extends State<WidgetApp>{
       _dropDownMemu.add(DropdownMenuItem(
         value: item, child: Text(item),));
     }
+    
+    /* 위의 반복문을 C언어로 유사하게 만들 경우
+    for(var item = 0; item = _buttonList.length; item++){
+      _dropDownMenu[item] = _buttonList[item];
+    }
+    */
     _buttonText = _buttonList[0];
   }
 
