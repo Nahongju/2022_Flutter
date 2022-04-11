@@ -22,6 +22,10 @@ class WidgetApp extends StatefulWidget{
 }
 
 class _WidgetExample extends State<WidgetApp>{
+  String sum = '';
+  TextEditingController value1 = TextEditingController();
+  TextEditingController value2 = TextEditingController();
+  
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -37,11 +41,17 @@ class _WidgetExample extends State<WidgetApp>{
                 padding: EdgeInsets.all(15),
               ),
               Padding(
-                child: TextField(),
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  controller: value1,
+                ),
                 padding: EdgeInsets.only(left: 20, right: 20),
               ),
               Padding(
-                child: TextField(),
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  controller: value2,
+                ),
                 padding: EdgeInsets.only(left:20, right:20),
               ),
               Padding(
