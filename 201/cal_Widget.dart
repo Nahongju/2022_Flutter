@@ -6,7 +6,7 @@ void main() {
 
 class MyApp extends StatelessWidget{
   static const String _title = 'Cal Widget';
-  
+
   @override
   Widget build(BuildContext context){
     return MaterialApp(
@@ -29,7 +29,13 @@ class _WidgetExample extends State<WidgetApp>{
         title: Text('Cal Widget'),
       ),
       body: Container(
-        
+        child: Center(
+          child: Column(
+            children: <Widget> [
+              Text('사칙연산'),
+            ],
+          ),
+        ),
       ),
     );
   }
