@@ -45,7 +45,7 @@ class _WidgetExampleState extends State<WidgetApp>{
               Padding(
                 padding: EdgeInsets.only(left: 20, right: 20),
                 child: TextField(
-                  keyboardType: TextInputType.number, 
+                  keyboardType: TextInputType.number,
                   controller: value1,),
               ),
               Padding(
@@ -57,7 +57,20 @@ class _WidgetExampleState extends State<WidgetApp>{
               ),
               Padding(
                 padding: EdgeInsets.all(15),
-                child: RaisedButton(onPressed: () {},),
+                child: RaisedButton(
+                  child: Row(
+                    children: <Widget> [
+                      Icon(Icons.add),
+                      Text('더하기')
+                    ],
+                  ),
+                  color: Colors.tealAccent,
+                  onPressed: () {
+                    setState(() {
+                      int result = int.parse(value1.value.text) + int.parse(value2.value.text);
+                      sum = '$result';
+                    });
+                  },),
               )
             ],
           ),
