@@ -40,7 +40,8 @@ class _WidgetExampleState extends State<WidgetApp>{
             children: <Widget> [
               Padding(
                 padding: EdgeInsets.all(15),
-                child: Text('사칙연산'),
+                child: Text('결과 : $sum',
+                style: TextStyle(fontSize: 20),),
               ),
               Padding(
                 padding: EdgeInsets.only(left: 20, right: 20),
