@@ -1,3 +1,4 @@
+// 4월 11일(월) 201 수업 내용
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class _WidgetExample extends State<WidgetApp>{
   String sum = '';
   TextEditingController value1 = TextEditingController();
   TextEditingController value2 = TextEditingController();
-  
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -57,6 +58,13 @@ class _WidgetExample extends State<WidgetApp>{
               Padding(
                 padding: EdgeInsets.all(15),
                 child: RaisedButton(
+                  child: Row(
+                    children: <Widget> [
+                      Icon(Icons.add),
+                      Text('더하기')
+                    ],
+                  ),
+                  color: Colors.amber,
                   onPressed: () {},
                 ),
               )
