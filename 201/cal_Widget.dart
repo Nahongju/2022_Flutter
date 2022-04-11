@@ -32,7 +32,24 @@ class _WidgetExample extends State<WidgetApp>{
         child: Center(
           child: Column(
             children: <Widget> [
-              Text('사칙연산'),
+              Padding(
+                child: Text('사칙연산'),
+                padding: EdgeInsets.all(15),
+              ),
+              Padding(
+                child: TextField(),
+                padding: EdgeInsets.only(left: 20, right: 20),
+              ),
+              Padding(
+                child: TextField(),
+                padding: EdgeInsets.only(left:20, right:20),
+              ),
+              Padding(
+                padding: EdgeInsets.all(15),
+                child: RaisedButton(
+                  onPressed: () {},
+                ),
+              )
             ],
           ),
         ),
