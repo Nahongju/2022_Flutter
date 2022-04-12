@@ -25,6 +25,11 @@ class _WidgetExample extends State<WidgetApp>{
   String sum = '';
   TextEditingController value1 = TextEditingController();
   TextEditingController value2 = TextEditingController();
+  List _buttonList = ['더하기', '빼기', '곱하기', '나누기'];
+  List<DropdownMenuItem<String>> _dropItems = new List.empty(growable: true);
+  
+  @override
+  
 
   @override
   Widget build(BuildContext context){
@@ -37,7 +42,7 @@ class _WidgetExample extends State<WidgetApp>{
           child: Column(
             children: <Widget> [
               Padding(
-                child: Text('사칙연산'),
+                child: Text('결과 : $sum', style: TextStyle(fontSize: 20),),
                 padding: EdgeInsets.all(15),
               ),
               Padding(
