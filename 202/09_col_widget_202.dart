@@ -38,7 +38,7 @@ class _WidgetExampleState extends State<WidgetApp>{
       _dropDownMemu.add(DropdownMenuItem(
         value: item, child: Text(item),));
     }
-    
+
     /* 위의 반복문을 C언어로 유사하게 만들 경우
     for(var item = 0; item = _buttonList.length; item++){
       _dropDownMenu[item] = _buttonList[item];
@@ -60,7 +60,7 @@ class _WidgetExampleState extends State<WidgetApp>{
               Padding(
                 padding: EdgeInsets.all(15),
                 child: Text('결과 : $sum',
-                style: TextStyle(fontSize: 20),),
+                  style: TextStyle(fontSize: 20),),
               ),
               Padding(
                 padding: EdgeInsets.only(left: 20, right: 20),
@@ -87,7 +87,24 @@ class _WidgetExampleState extends State<WidgetApp>{
                   color: Colors.tealAccent,
                   onPressed: () {
                     setState(() {
-                      int result = int.parse(value1.value.text) + int.parse(value2.value.text);
+                      var value1Int = double.parse(value1.value.text);
+                      var value2Int = double.parse(value2.value.text);
+                      var result;
+
+                      if(_buttonText == '더하기'){
+                        result = value1Int + value2Int;
+                      }
+                      else if(_buttonText == '빼기'){
+                        result = value1Int - value2Int;
+                      }
+
+                      else if(_buttonText == '곱하기'){
+                        result = value1Int * value2Int;
+                      }
+
+                      else{
+                        result = value1Int / value2Int;
+                      }
                       sum = '$result';
                     });
                   },),
