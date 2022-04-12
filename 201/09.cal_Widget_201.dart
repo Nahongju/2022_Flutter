@@ -1,4 +1,3 @@
-// 4월 11일(월) 201 수업 내용
 import 'package:flutter/material.dart';
 
 void main() {
@@ -65,7 +64,12 @@ class _WidgetExample extends State<WidgetApp>{
                     ],
                   ),
                   color: Colors.amber,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      int result = int.parse(value1.value.text) + int.parse(value2.value.text);
+                      sum = '$result';
+                    });
+                  },
                 ),
               )
             ],
