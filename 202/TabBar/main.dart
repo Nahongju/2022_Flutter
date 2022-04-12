@@ -11,7 +11,16 @@ class MyHomePageState extends StatefulWidget{
   }
 }
 
-class _MyHomePageState extends State<MyHomePageState>{
+class _MyHomePageState extends State<MyHomePageState>
+  with SingleTickerProviderStateMixin{
+  TabController? controller;
+  
+  @override
+  void initState(){
+    super.initState();
+    controller = TabController(length: 2, vsync: this);
+  }
+  
   @override
   Widget build(BuildContext context){
     return null;
