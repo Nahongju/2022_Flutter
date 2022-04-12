@@ -27,9 +27,16 @@ class _WidgetExample extends State<WidgetApp>{
   TextEditingController value2 = TextEditingController();
   List _buttonList = ['더하기', '빼기', '곱하기', '나누기'];
   List<DropdownMenuItem<String>> _dropItems = new List.empty(growable: true);
-  
+  String? _buttonText;
+
   @override
-  
+  void initState(){
+    super.initState();
+    for(var item in _buttonList){
+      _dropItems.add(DropdownMenuItem(value: item, child: Text(item),));
+    }
+    _buttonText = _dropItems[0].value;
+  }
 
   @override
   Widget build(BuildContext context){
@@ -76,6 +83,15 @@ class _WidgetExample extends State<WidgetApp>{
                     });
                   },
                 ),
+              ),
+              Padding(
+                  padding: EdgeInsets.all(15),
+                  child: DropdownButton(items: _dropItems,
+                    onChanged: (value) {
+                      setState(() {
+                        _buttonText = value as String?;
+                      });
+                    },value: _buttonText),
               )
             ],
           ),
